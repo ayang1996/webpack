@@ -37,14 +37,14 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name',
+      message: 'ZyProject name',
     },
     description: {
       when: 'isNotTest',
       type: 'string',
       required: false,
       message: 'Project description',
-      default: 'A Vue.js project',
+      default: 'A Vue.js project By Zy',
     },
     author: {
       when: 'isNotTest',
@@ -73,6 +73,10 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install vue-router?',
+    },
+    vuex:{
+        "type": "confirm",
+        "message": "Install vuex?"
     },
     lint: {
       when: 'isNotTest',
@@ -168,6 +172,7 @@ module.exports = {
     'test/unit/karma.conf.js': "unit && runner === 'karma'",
     'test/unit/specs/index.js': "unit && runner === 'karma'",
     'test/unit/setup.js': "unit && runner === 'jest'",
+    'src/store/**/*': "vuex",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
   },
